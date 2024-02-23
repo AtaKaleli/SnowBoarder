@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float delayAmount;
     [SerializeField] private ParticleSystem finishEffect;
     [SerializeField] private ParticleSystem crashEffect;
+    [SerializeField] private ParticleSystem snowEffect;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Ground")
@@ -25,6 +26,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Ground")
+        {
+            snowEffect.Stop();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            snowEffect.Play();
+        }
+    }
+
+
+
+    
 
     private void OnCollisionEnterFinishLine()
     {
