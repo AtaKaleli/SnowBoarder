@@ -7,15 +7,19 @@ public class GameManager : MonoBehaviour
 {
 
     [SerializeField] private float delayAmount;
+    [SerializeField] private ParticleSystem finishEffect;
+    [SerializeField] private ParticleSystem crashEffect;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Ground")
         {
+            crashEffect.Play();
             Invoke("OnCollisionEnterFinishLine", delayAmount);
         }
             
         else if (collision.tag == "FinishLine")
         {
+            finishEffect.Play();
             Invoke("OnCollisionEnterCrash", delayAmount);
 
         }
