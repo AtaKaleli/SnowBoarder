@@ -10,17 +10,28 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ParticleSystem finishEffect;
     [SerializeField] private ParticleSystem crashEffect;
     [SerializeField] private ParticleSystem snowEffect;
+
+    private bool hasCrashed;
+    
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Ground")
+
+        
+
+        if (collision.tag == "Ground" && !hasCrashed)
         {
+            hasCrashed = true;
+            FindObjectOfType<PlayerController>().changeMove();
             crashEffect.Play();
+            AudioManager.instance.PlayCrashSFX();
             Invoke("OnCollisionEnterFinishLine", delayAmount);
         }
             
         else if (collision.tag == "FinishLine")
         {
             finishEffect.Play();
+            AudioManager.instance.PlayFinishSFX();
             Invoke("OnCollisionEnterCrash", delayAmount);
 
         }
@@ -31,6 +42,8 @@ public class GameManager : MonoBehaviour
         if(collision.gameObject.tag == "Ground")
         {
             snowEffect.Stop();
+            AudioManager.instance.PauseSnowBoardAudio();
+            
         }
     }
 
@@ -39,6 +52,8 @@ public class GameManager : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             snowEffect.Play();
+            AudioManager.instance.PlaySnowBoardAudio();
+            
         }
     }
 
