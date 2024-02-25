@@ -6107,7 +6107,6 @@ GameObject:
   - component: {fileID: 713026720}
   - component: {fileID: 713026721}
   - component: {fileID: 713026722}
-  - component: {fileID: 713026723}
   - component: {fileID: 713026724}
   m_Layer: 0
   m_Name: Player
@@ -6201,18 +6200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torqueAmount: 10
---- !u!114 &713026723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713026717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73f8c1b34a2bb3741985ebc530930813, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &713026724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16817,7 +16804,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: e5d53de02819ea84ea6e0e0bb1928577, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16836,7 +16823,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1754776634}
-  - component: {fileID: 1754776633}
   - component: {fileID: 1754776635}
   m_Layer: 0
   m_Name: FinishLine
@@ -16845,18 +16831,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1754776633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1754776632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6369dc82e4f91ab4aae2f1087147e029, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1754776634
 Transform:
   m_ObjectHideFlags: 0
