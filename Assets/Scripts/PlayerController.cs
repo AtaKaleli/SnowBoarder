@@ -72,9 +72,14 @@ public class PlayerController : MonoBehaviour
 
         else if (Input.GetKey(KeyCode.D))
         {
-            
             AudioManager.instance.PlayClappingBackgroundAudio();
             rb.AddTorque(-torqueAmount);
+        }
+
+        else
+        {
+            AudioManager.instance.PauseClappingBackgroundAudio();
+
         }
 
     }
