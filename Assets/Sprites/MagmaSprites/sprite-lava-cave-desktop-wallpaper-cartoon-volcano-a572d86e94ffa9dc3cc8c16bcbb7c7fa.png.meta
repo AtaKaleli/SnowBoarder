@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: 4d5bd761468e6e84eaa0c0197a32146f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 383
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b104fb4b921ef654eb5327106673f68f
+      internalID: 778243750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 383
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2a7353f031c1d49860ee9bb4725647
+      internalID: -1034514531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 384
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7352eee26ba359a4ca926b2f5aeb867a
+      internalID: 637966932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_3
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 383
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14aebd0dc923c54f97b0274393461f4
+      internalID: 721235222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_4
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 384
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15839666d92efb94598675918563fd13
+      internalID: 773953609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_5
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 383
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e196958a93ce44aa0fe85dedb1f9b3
+      internalID: -790692439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_6
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 384
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1964bd7bf65f7ff46b4338dc3348b845
+      internalID: 1636678335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_7
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 376
+        width: 191
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca17251ce7ff92143bf44db17d84a9e7
+      internalID: -403556094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_8
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 349
+        width: 68
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4499a84b232349d44921c4fe69cea680
+      internalID: 564201156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_9
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 309
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6993fd386cef32d4eb6c6cd6dc2a5dab
+      internalID: 103881411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_10
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 309
+        width: 41
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40509b977c6cd5e4e9281453c53e2145
+      internalID: 906768233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_11
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 246
+        width: 119
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6467792e26a5dd643b8998ee4c1eca73
+      internalID: -1638229433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 254
+        width: 85
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d5a7930eaf02f4d8276d853c6ff46a
+      internalID: 1395001806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_13
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 250
+        width: 53
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f710fab4c7c354783e4bc7e0374c88
+      internalID: 1500162199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_14
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 258
+        width: 179
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661ba0182b52cb84f8eda0f74fe07b80
+      internalID: -1548533645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_15
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 89
+        width: 70
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49110bfe730f623468006c4fa9f5a71e
+      internalID: -418221369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_9: 103881411
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_1: -1034514531
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_4: 773953609
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_2: 637966932
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_6: 1636678335
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_5: -790692439
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_13: 1500162199
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_3: 721235222
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_11: -1638229433
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_14: -1548533645
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_10: 906768233
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_7: -403556094
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_8: 564201156
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_12: 1395001806
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_0: 778243750
+      sprite-lava-cave-desktop-wallpaper-cartoon-volcano-a572d86e94ffa9dc3cc8c16bcbb7c7fa_15: -418221369
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

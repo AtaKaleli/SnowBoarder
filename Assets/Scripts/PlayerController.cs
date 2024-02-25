@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private SurfaceEffector2D surfaceEffector2D;
     private Rigidbody2D rb;
     [SerializeField] private float torqueAmount;
+    [SerializeField] private float speedUp;
+    [SerializeField] private float speedNormal;
 
     private bool isMove;
     
@@ -49,13 +51,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
          
-            surfaceEffector2D.speed = 25;
+            surfaceEffector2D.speed = speedUp;
         }
         
         else
         {
             
-            surfaceEffector2D.speed = 15;
+            surfaceEffector2D.speed = speedNormal;
         }
     }
 
