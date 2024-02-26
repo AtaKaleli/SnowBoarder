@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     private void OnCollisionEnterFinishLine()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void OnCollisionEnterCrash()
