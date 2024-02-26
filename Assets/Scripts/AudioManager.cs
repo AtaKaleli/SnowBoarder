@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource sfxAudio;
     [SerializeField] private AudioSource snowboardAudio;
     [SerializeField] private AudioSource backgroundAudio;
-    [SerializeField] private AudioSource clappingBackgroundAudio;
+    
     [SerializeField] private AudioClip finishSFX;
     [SerializeField] private AudioClip crashSFX;
     [SerializeField] private AudioClip speedUpSFX;
@@ -30,8 +30,7 @@ public class AudioManager : MonoBehaviour
     public void PauseSnowBoardAudio() => snowboardAudio.Pause();
     public void PlaySnowBoardAudio() => snowboardAudio.UnPause();
 
-    public void PauseClappingBackgroundAudio() => clappingBackgroundAudio.Pause();
-    public void PlayClappingBackgroundAudio() => clappingBackgroundAudio.UnPause();
+   
 
 
 
