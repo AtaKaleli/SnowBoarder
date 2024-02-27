@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,10 +12,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ParticleSystem crashEffect;
     [SerializeField] private ParticleSystem snowEffect;
 
+    [SerializeField] private GameObject achivementPanel;
+
     [SerializeField] private Camera mainCamera;
 
     private bool hasCrashed;
 
+    private bool[] gotLevelAchivements = { false, false, false, false };
+
+    
     private void Awake()
     {
 
@@ -53,12 +59,42 @@ public class GameManager : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if(collision.tag == "Level3Achivement")
+
+        if(collision.tag == "level1Achivement" && !gotLevelAchivements[0])
         {
+            AudioManager.instance.PlayLevel1AchivementSFX();
+
+            achivementPanel.SetActive(true);
+            gotLevelAchivements[0] = true;
+            StartCoroutine(CloseAchivementPanel());
+
+        }
+
+        else if (collision.tag == "Level2Achivement" && !gotLevelAchivements[1])
+        {
+
+
+            AudioManager.instance.PlayLevel1AchivementSFX();
+            achivementPanel.SetActive(true);
+            gotLevelAchivements[1] = true;
+            StartCoroutine(CloseAchivementPanel());
+
+        }
+
+        else if (collision.tag == "Level3Achivement" && !gotLevelAchivements[2])
+        {
+            
+
             Destroy(collision.gameObject);
             mainCamera.backgroundColor = Color.black;
-           
+            gotLevelAchivements[2] = true;
+            StartCoroutine(CloseAchivementPanel());
+
         }
+
+
+
+
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -82,7 +118,11 @@ public class GameManager : MonoBehaviour
     }
 
 
-
+    IEnumerator CloseAchivementPanel()
+    {
+        yield return new WaitForSeconds(5f);
+        achivementPanel.SetActive(false);
+    }
     
 
     private void OnCollisionEnterFinishLine()

@@ -12666,10 +12666,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e045c41d978e0742b31e0d8ccc9039c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayAmount: 0.5
+  delayAmount: 1.5
   finishEffect: {fileID: 214813741}
   crashEffect: {fileID: 1694653077}
   snowEffect: {fileID: 648266801}
+  achivementPanel: {fileID: 0}
   mainCamera: {fileID: 0}
 --- !u!1 &750144516
 GameObject:
@@ -15687,6 +15688,10 @@ MonoBehaviour:
   crashSFX: {fileID: 8300000, guid: 8039bd2c56579264387da91f2885ccd0, type: 3}
   speedUpSFX: {fileID: 8300000, guid: acc3cd10796eb4640850e6b0cada813b, type: 3}
   collectScoreObjectSFX: {fileID: 8300000, guid: 3697eccbd2225564f81e359e2e16883f, type: 3}
+  level1AchivementSFX: {fileID: 0}
+  level2AchivementSFX: {fileID: 8300000, guid: a77a38121fc025347b73cc73f1831095, type: 3}
+  level3AchivementSFX: {fileID: 0}
+  level4AchivementSFX: {fileID: 0}
 --- !u!4 &1492431841
 Transform:
   m_ObjectHideFlags: 0
