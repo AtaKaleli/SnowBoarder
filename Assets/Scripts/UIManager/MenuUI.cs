@@ -6,8 +6,8 @@ public class MenuUI : MonoBehaviour
     [SerializeField] private GameObject menuScreen;
     [SerializeField] private GameObject howToPlayScreen;
     [SerializeField] private GameObject creditsScreen;
-    
 
+    
 
 
 
@@ -45,7 +45,8 @@ public class MenuUI : MonoBehaviour
     {
         MenuAudio.instance.PlayButtonClick();
         menuScreen.SetActive(false);
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 
     public void OnClickExitGame()

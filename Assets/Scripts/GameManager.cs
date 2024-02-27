@@ -25,14 +25,14 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<PlayerController>().changeMove();
             crashEffect.Play();
             AudioManager.instance.PlayCrashSFX();
-            Invoke("OnCollisionEnterFinishLine", delayAmount);
+            Invoke("OnCollisionEnterCrash", delayAmount);
         }
             
         else if (collision.tag == "FinishLine")
         {
             finishEffect.Play();
             AudioManager.instance.PlayFinishSFX();
-            Invoke("OnCollisionEnterCrash", delayAmount);
+            Invoke("OnCollisionEnterFinishLine", delayAmount);
 
         }
     }
@@ -63,11 +63,11 @@ public class GameManager : MonoBehaviour
 
     private void OnCollisionEnterFinishLine()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void OnCollisionEnterCrash()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
