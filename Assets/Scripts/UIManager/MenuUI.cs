@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -44,8 +45,8 @@ public class MenuUI : MonoBehaviour
     public void OnClickStartGame()
     {
         MenuAudio.instance.PlayButtonClick();
-        menuScreen.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        LevelTransition.instance.PlayEndTransition();
+        StartCoroutine(StartGame());
 
     }
 
@@ -54,7 +55,11 @@ public class MenuUI : MonoBehaviour
         Application.Quit();
     }
 
-   
+    IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 
    
 
