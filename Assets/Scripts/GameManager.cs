@@ -11,9 +11,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ParticleSystem crashEffect;
     [SerializeField] private ParticleSystem snowEffect;
 
+    [SerializeField] private Camera mainCamera;
+
     private bool hasCrashed;
-    
-    
+
+    private void Awake()
+    {
+
+        
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -21,6 +29,7 @@ public class GameManager : MonoBehaviour
 
         if (collision.tag == "Ground" && !hasCrashed)
         {
+            LevelTransition.instance.PlayEndTransition();
             hasCrashed = true;
             FindObjectOfType<PlayerController>().changeMove();
             crashEffect.Play();
@@ -30,10 +39,25 @@ public class GameManager : MonoBehaviour
             
         else if (collision.tag == "FinishLine")
         {
+            LevelTransition.instance.PlayEndTransition();
             finishEffect.Play();
             AudioManager.instance.PlayFinishSFX();
             Invoke("OnCollisionEnterFinishLine", delayAmount);
 
+        }
+
+
+        if(collision.tag == "ScoreObject")
+        {
+            AudioManager.instance.PlayCollectScoreObjectSFX();
+            Destroy(collision.gameObject);
+        }
+
+        if(collision.tag == "Level3Achivement")
+        {
+            Destroy(collision.gameObject);
+            mainCamera.backgroundColor = Color.black;
+           
         }
     }
 

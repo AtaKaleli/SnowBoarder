@@ -7,6 +7,11 @@ TagManager:
   - FinishLine
   - PlayerHead
   - Ground
+  - ScoreObject
+  - level1Achivement
+  - Level2Achivement
+  - Level3Achivement
+  - Level4Achivement
   layers:
   - Default
   - TransparentFX
