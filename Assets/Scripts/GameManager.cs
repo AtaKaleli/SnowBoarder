@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,13 +21,42 @@ public class GameManager : MonoBehaviour
 
     private bool[] gotLevelAchivements = { false, false, false, false };
 
+    [SerializeField] private TextMeshProUGUI scoreText;
+  
+    private int collectedScoreObjects;
+    
+    private float overallScore;
+
     
     private void Awake()
     {
-
-        
+      
+        collectedScoreObjects = 0;
+        overallScore = 0;
 
     }
+
+
+    private void Update()
+    {
+
+        
+        overallScore += Time.deltaTime;
+        CalculateScore(overallScore);
+        
+
+
+    }
+
+    private void CalculateScore(float score)
+    {
+        scoreText.text = score.ToString("#,#");
+    }
+
+    private void AddScoreObject() => collectedScoreObjects++;
+    
+    
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -55,6 +85,10 @@ public class GameManager : MonoBehaviour
 
         if(collision.tag == "ScoreObject")
         {
+            AddScoreObject();
+            overallScore += 10;
+            CalculateScore(overallScore);
+
             AudioManager.instance.PlayCollectScoreObjectSFX();
             Destroy(collision.gameObject);
         }
