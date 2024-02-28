@@ -21,12 +21,34 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip level4AchivementSFX;
 
     
-    
+    [SerializeField] private AudioClip welcomingInfoSFX;
+    [SerializeField] private AudioClip leftShiftInfoSFX;
+    [SerializeField] private AudioClip rotateInfoSFX;
+    [SerializeField] private AudioClip rotateInfoForwardSFX;
+    [SerializeField] private AudioClip trySpinInfoSFX;
+    [SerializeField] private AudioClip finalInfoSFX;
+
+
+
     void Start()
     {
         instance = this;
         
     }
+
+
+    public void PlayWelcomingSFX() => sfxAudio.PlayOneShot(welcomingInfoSFX);
+    public void PlayLeftShiftInfoSFX() => sfxAudio.PlayOneShot(leftShiftInfoSFX);
+    public void PlayRotateInfoSFX() => sfxAudio.PlayOneShot(rotateInfoSFX);
+    public void PlayRotateInfoForwardSFX() => sfxAudio.PlayOneShot(rotateInfoForwardSFX);
+    public void PlayTrySpinInfoSFX() => sfxAudio.PlayOneShot(trySpinInfoSFX);
+    public void PlayFinalInfoSFX() => sfxAudio.PlayOneShot(finalInfoSFX);
+
+
+
+
+
+
 
 
     public void PlayFinishSFX() => sfxAudio.PlayOneShot(finishSFX); 
@@ -38,6 +60,8 @@ public class AudioManager : MonoBehaviour
     public void PlayLevel2AchivementSFX() => sfxAudio.PlayOneShot(level2AchivementSFX);
     public void PlayLevel3AchivementSFX() => sfxAudio.PlayOneShot(level3AchivementSFX);
     public void PlayLevel4AchivementSFX() => sfxAudio.PlayOneShot(level4AchivementSFX);
+
+    
 
     public void PauseSnowBoardAudio() => snowboardAudio.Pause();
     public void PlaySnowBoardAudio() => snowboardAudio.UnPause();

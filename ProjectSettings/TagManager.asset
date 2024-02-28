@@ -12,6 +12,13 @@ TagManager:
   - Level2Achivement
   - Level3Achivement
   - Level4Achivement
+  - LeftShiftInfo
+  - WelcomingInfo
+  - RotateInfo
+  - RotateInfoForward
+  - RotateBackwardInfo
+  - TryInfo
+  - FinalInfo
   layers:
   - Default
   - TransparentFX

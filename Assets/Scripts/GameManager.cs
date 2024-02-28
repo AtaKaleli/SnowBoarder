@@ -22,9 +22,12 @@ public class GameManager : MonoBehaviour
     private bool[] gotLevelAchivements = { false, false, false, false };
 
     [SerializeField] private TextMeshProUGUI scoreText;
-  
-    
-    
+
+    [Header("Tutorial")]
+    [SerializeField] private TextMeshProUGUI infoText;
+    [SerializeField] private GameObject infoObject;
+
+
     public float overallScore;
 
     
@@ -48,20 +51,110 @@ public class GameManager : MonoBehaviour
 
     }
 
+
+    
+
+
+
+  
+
+
+    
+
+
+
+
+
+
     public void CalculateScore(float score)
     {
         scoreText.text = score.ToString("#,#");
     }
 
-   
-    
-    
+
+    IEnumerator DisableInfoText()
+    {
+        yield return new WaitForSeconds(3f);
+        infoObject.SetActive(false);
+
+    }
+
+
+    public void EnableInfoText() => infoObject.SetActive(true);
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.tag == "WelcomingInfo")
+        {
+            
+            AudioManager.instance.PlayWelcomingSFX();
+            
+        }
 
-        
+
+        else if (collision.tag == "LeftShiftInfo")
+        {
+
+            EnableInfoText();
+            infoText.text = "Press LEFT SHIFT to speed up ";
+            AudioManager.instance.PlayLeftShiftInfoSFX();
+            StartCoroutine(DisableInfoText());
+        }
+
+        else if (collision.tag == "RotateInfo")
+        {
+
+            EnableInfoText();
+            infoText.text = "Press A or D to rotate your character";
+            AudioManager.instance.PlayRotateInfoSFX();
+            StartCoroutine(DisableInfoText());
+        }
+
+        else if (collision.tag == "RotateBackwardInfo")
+        {
+
+            EnableInfoText();
+            infoText.text = "Press and hold A";
+            
+            StartCoroutine(DisableInfoText());
+        }
+
+        else if (collision.tag == "RotateInfoForward")
+        {
+
+            EnableInfoText();
+            infoText.text = "Press and hold D";
+            AudioManager.instance.PlayRotateInfoForwardSFX();
+            StartCoroutine(DisableInfoText());
+        }
+
+        else if (collision.tag == "TryInfo")
+        {
+
+         
+            AudioManager.instance.PlayTrySpinInfoSFX();
+            
+        }
+        else if (collision.tag == "FinalInfo")
+        {
+
+
+            AudioManager.instance.PlayFinalInfoSFX();
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
         if (collision.tag == "Ground" && !hasCrashed)
         {
@@ -139,6 +232,11 @@ public class GameManager : MonoBehaviour
             StartCoroutine(CloseAchivementPanel());
 
         }
+
+
+
+
+
 
 
     }
