@@ -97,7 +97,8 @@ public class GameManager : MonoBehaviour
         if(collision.tag == "level1Achivement" && !gotLevelAchivements[0])
         {
             AudioManager.instance.PlayLevel1AchivementSFX();
-
+            overallScore += 10000;
+            Destroy(collision.gameObject);
             achivementPanel.SetActive(true);
             gotLevelAchivements[0] = true;
             StartCoroutine(CloseAchivementPanel());
@@ -107,7 +108,8 @@ public class GameManager : MonoBehaviour
         else if (collision.tag == "Level2Achivement" && !gotLevelAchivements[1])
         {
 
-
+            overallScore += 10000;
+            Destroy(collision.gameObject);
             AudioManager.instance.PlayLevel2AchivementSFX();
             achivementPanel.SetActive(true);
             gotLevelAchivements[1] = true;
@@ -119,7 +121,7 @@ public class GameManager : MonoBehaviour
         {
             AudioManager.instance.PlayLevel3AchivementSFX();
             achivementPanel.SetActive(true);
-
+            overallScore += 10000;
             Destroy(collision.gameObject);
             mainCamera.backgroundColor = Color.black;
             gotLevelAchivements[2] = true;
@@ -131,7 +133,7 @@ public class GameManager : MonoBehaviour
         {
             AudioManager.instance.PlayLevel4AchivementSFX();
             achivementPanel.SetActive(true);
-
+            overallScore += 10000;
             Destroy(collision.gameObject);
             gotLevelAchivements[3] = true;
             StartCoroutine(CloseAchivementPanel());
