@@ -12,11 +12,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speedNormal;
 
     private bool isMove;
+
+    private GameManager gameManager;
+    private float rotateScore;
     
 
     void Start()
     {
-        
+        rotateScore = 0;
+        gameManager = FindObjectOfType<GameManager>();
         isMove = true;
         surfaceEffector2D = FindObjectOfType<SurfaceEffector2D>();
         rb = GetComponent<Rigidbody2D>();
@@ -63,22 +67,35 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerRotate()
     {
-        
+
         if (Input.GetKey(KeyCode.A))
         {
+
+            rotateScore += (torqueAmount / 10000);
+            gameManager.overallScore += rotateScore;
             
-            
+
             rb.AddTorque(torqueAmount);
 
         }
 
         else if (Input.GetKey(KeyCode.D))
         {
-           
+            
+
+            rotateScore += (torqueAmount/10000);
+            
+            gameManager.overallScore += rotateScore;
+            
             rb.AddTorque(-torqueAmount);
         }
 
+        else
+            rotateScore = 0;
+
+
         
+
     }
 
 

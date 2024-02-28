@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
   
     private int collectedScoreObjects;
     
-    private float overallScore;
+    public float overallScore;
 
     
     private void Awake()
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void CalculateScore(float score)
+    public void CalculateScore(float score)
     {
         scoreText.text = score.ToString("#,#");
     }
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
         if(collision.tag == "ScoreObject")
         {
             AddScoreObject();
-            overallScore += 10;
+            overallScore += 100;
             CalculateScore(overallScore);
 
             AudioManager.instance.PlayCollectScoreObjectSFX();
