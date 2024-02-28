@@ -15,7 +15,13 @@ public class PlayerController : MonoBehaviour
 
     private GameManager gameManager;
     private float rotateScore;
-    
+
+
+    [SerializeField] private float groundCheckRadius;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask whatIsGround;
+    private bool isGrounded;
+
 
     void Start()
     {
@@ -30,10 +36,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        BoardOnTheGroundDetection();
+
         if (isMove)
         {
-            PlayerRotate();
-            BoostControl();
+            if(isGrounded)
+                BoostControl();
+            else
+                PlayerRotate();
+            
     
         }
         
@@ -98,7 +110,16 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        
+    }
+
+    private void BoardOnTheGroundDetection()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+    }
 
 
-    
 }

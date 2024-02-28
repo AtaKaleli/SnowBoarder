@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI scoreText;
   
-    private int collectedScoreObjects;
+    
     
     public float overallScore;
 
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
       
-        collectedScoreObjects = 0;
+        
         overallScore = 0;
 
     }
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = score.ToString("#,#");
     }
 
-    private void AddScoreObject() => collectedScoreObjects++;
+   
     
     
 
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
 
         if(collision.tag == "ScoreObject")
         {
-            AddScoreObject();
+            
             overallScore += 100;
             CalculateScore(overallScore);
 
