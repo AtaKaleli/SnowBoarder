@@ -145,17 +145,6 @@ public class GameManager : MonoBehaviour
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
         if (collision.tag == "Ground" && !hasCrashed)
         {
             LevelTransition.instance.PlayEndTransition();
