@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private SurfaceEffector2D surfaceEffector2D;
     private Rigidbody2D rb;
     [SerializeField] private float torqueAmount;
-    [SerializeField] private float speedUp;
+    public float speedUp;
     public float speedNormal;
 
     private bool isMove;

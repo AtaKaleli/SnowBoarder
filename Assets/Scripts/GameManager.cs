@@ -279,6 +279,7 @@ public class GameManager : MonoBehaviour
     IEnumerator ShowEndGameScreen()
     {
         playerController.speedNormal = 0;
+        playerController.speedUp = 0;
         finishLine.SetActive(false);
         endPortal.SetActive(false);
         snowParticles.SetActive(false);
