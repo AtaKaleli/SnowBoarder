@@ -32,6 +32,7 @@ public class GameUI : MonoBehaviour
 
     public void OnClickNextLevel()
     {
+        
         Time.timeScale = 1;
         LevelTransition.instance.PlayEndTransition();
         StartCoroutine(MoveNextLevel());

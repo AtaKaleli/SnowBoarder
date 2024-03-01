@@ -446,7 +446,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 679251104}
         m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
         m_MethodName: OnClickExitGame
         m_Mode: 1
@@ -12532,7 +12532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e045c41d978e0742b31e0d8ccc9039c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayAmount: 1.5
+  delayAmount: 0.5
   finishEffect: {fileID: 214813741}
   crashEffect: {fileID: 1694653077}
   snowEffect: {fileID: 648266801}
@@ -13566,7 +13566,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 679251104}
         m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
         m_MethodName: OnClickReturnMenu
         m_Mode: 1
@@ -13946,7 +13946,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 679251104}
         m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
         m_MethodName: OnClickRestartLevel
         m_Mode: 1
@@ -14543,7 +14543,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 679251104}
         m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
         m_MethodName: OnClickNextLevel
         m_Mode: 1
