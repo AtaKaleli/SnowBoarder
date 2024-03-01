@@ -164,7 +164,6 @@ public class GameManager : MonoBehaviour
 
         }
 
-
         if(collision.tag == "ScoreObject")
         {
             
