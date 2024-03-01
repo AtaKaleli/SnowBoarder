@@ -167,7 +167,10 @@ public class GameManager : MonoBehaviour
             
         else if (collision.tag == "FinishLine")
         {
-            
+
+            if (SceneManager.GetActiveScene().buildIndex == 5)
+                GameUI.instance.MakeNextLevelButtonClear();
+
             finishEffect.Play();
             AudioManager.instance.PlayFinishSFX();
             StartCoroutine(ShowEndGameScreen());
