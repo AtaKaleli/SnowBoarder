@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 3001058}
   - component: {fileID: 3001057}
   - component: {fileID: 3001056}
+  - component: {fileID: 3001060}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -228,6 +229,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &3001060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3001055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641540b6dd3c2984ea7af2299f9ee34c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelEnd: 0
+  endGamePanel: {fileID: 2021110939}
 --- !u!1 &11140922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,7 +1333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212435905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.43111, y: 7.63, z: -10.087328}
+  m_LocalPosition: {x: 601.0889, y: 4.1, z: -10.087328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6919,7 +6934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.735}
   m_AnchorMax: {x: 0.5, y: 0.735}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 431.1915, y: 56.3051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &347774484
@@ -12836,7 +12851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713026717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.32, y: 7.63, z: -0.08732783}
+  m_LocalPosition: {x: 592.2, y: 4.1, z: -0.08732783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12912,15 +12927,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e045c41d978e0742b31e0d8ccc9039c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayAmount: 1.5
+  delayAmount: 1
   finishEffect: {fileID: 214813741}
   crashEffect: {fileID: 1694653077}
   snowEffect: {fileID: 648266801}
   achivementPanel: {fileID: 1158455537}
   mainCamera: {fileID: 0}
   scoreText: {fileID: 1935533823}
-  infoText: {fileID: 0}
-  infoObject: {fileID: 0}
+  infoText: {fileID: 1935533823}
+  infoObject: {fileID: 1935533821}
+  finishLine: {fileID: 201323132}
+  endPortal: {fileID: 1058532182}
+  snowParticles: {fileID: 648266798}
   overallScore: 0
 --- !u!1 &828542474
 GameObject:
@@ -14251,6 +14269,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.36, y: 1.8}
   m_EdgeRadius: 0
+--- !u!1 &1058532182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 377714321580492264, guid: d79dedc19ae7fa947b8bd187557ab3d4, type: 3}
+  m_PrefabInstance: {fileID: 1587226652}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1063318211
 GameObject:
   m_ObjectHideFlags: 0
@@ -14557,7 +14580,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1119789259}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3001060}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnClickReturnMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1119789259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14982,7 +15017,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1245104313}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3001060}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnClickRestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1245104313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15782,7 +15829,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1445396186}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3001060}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnClickNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1445396186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16968,7 +17027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675642502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.43111, y: 7.63, z: -10.087328}
+  m_LocalPosition: {x: 601.0889, y: 4.1, z: -10.087328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23590,7 +23649,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2076078570}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3001060}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: OnClickExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2076078570
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float torqueAmount;
     [SerializeField] private float speedUp;
-    [SerializeField] private float speedNormal;
+    public float speedNormal;
 
     private bool isMove;
 
@@ -36,18 +36,24 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         BoardOnTheGroundDetection();
-
-        if (isMove)
+        if (!(GameUI.instance.levelEnd))
         {
-            if(isGrounded)
-                BoostControl();
-            else
-                PlayerRotate();
-            
-    
+
+            if (isMove)
+            {
+                if (isGrounded)
+                    BoostControl();
+                else
+                    PlayerRotate();
+
+
+            }
         }
+        
+                       
+        
         
     }
 

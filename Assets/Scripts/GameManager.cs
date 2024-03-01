@@ -27,14 +27,21 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI infoText;
     [SerializeField] private GameObject infoObject;
 
+    private PlayerController playerController;
+
+    [SerializeField] private GameObject finishLine;
+    [SerializeField] private GameObject endPortal;
+    [SerializeField] private GameObject snowParticles;
+    
+
 
     public float overallScore;
 
     
     private void Awake()
     {
-      
-        
+
+        playerController = FindObjectOfType<PlayerController>();
         overallScore = 0;
 
     }
@@ -43,9 +50,12 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
 
+        if (!GameUI.instance.levelEnd)
+        {
+            overallScore += Time.deltaTime;
+            CalculateScore(overallScore);
+        }
         
-        overallScore += Time.deltaTime;
-        CalculateScore(overallScore);
         
 
 
@@ -157,10 +167,12 @@ public class GameManager : MonoBehaviour
             
         else if (collision.tag == "FinishLine")
         {
-            LevelTransition.instance.PlayEndTransition();
+            
             finishEffect.Play();
             AudioManager.instance.PlayFinishSFX();
-            Invoke("OnCollisionEnterFinishLine", delayAmount);
+            StartCoroutine(ShowEndGameScreen());
+
+        
 
         }
 
@@ -257,13 +269,26 @@ public class GameManager : MonoBehaviour
     }
     
 
-    private void OnCollisionEnterFinishLine()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    
 
     private void OnCollisionEnterCrash()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    IEnumerator ShowEndGameScreen()
+    {
+        playerController.speedNormal = 0;
+        finishLine.SetActive(false);
+        endPortal.SetActive(false);
+        snowParticles.SetActive(false);
+        yield return new WaitForSeconds(delayAmount);
+       
+        GameUI.instance.MakeEndGamePanelSet();
+        
+
+
+    }
+    
+
 }
